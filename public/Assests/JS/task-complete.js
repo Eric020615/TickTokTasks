@@ -16,7 +16,7 @@ toggle_side_btn.onclick = function(){
         sidebar.className = "sidebar d-none d-md-block min-vh-100 col-auto position-fixed";
     }
 
-    const auto_close_sideNav = window.matchMedia('(min-width: 767px)');
+    const auto_close_sideNav = window.matchMedia('(min-width: 768px)');
     function close(e){
         if(e.matches){
             sidebar.className = "sidebar d-none d-md-block min-vh-100 col-auto position-fixed";
