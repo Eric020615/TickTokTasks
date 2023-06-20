@@ -17,7 +17,6 @@ a {
 /* SideNavBar ========================================================= */
 .sidebar {
   display: flex;
-  /* position: fixed; */
   top: 0;
   left: 0;
   width: 200px;
@@ -57,7 +56,6 @@ a {
   margin-top: 20px;
   color: white;
   padding-left: -20px;
-  /* background-color: aliceblue; */
 }
 
 .sidebar .sidemenu {
@@ -172,7 +170,6 @@ nav{
 }
 
 .nav-brand{
-    /* font-family: 'Bitter'; */
     font-size: 30px;
     font-weight: bold;
     color: white;
@@ -196,7 +193,6 @@ nav ul li:first-child{
 }
 
 .nav-item a{
-    /* font-family: 'Poppins'; */
     font-size: 18px;
     color: white;
     margin: 0;
@@ -234,7 +230,6 @@ nav ul li:first-child{
 }  
 
 main ol{
-    /* font-family: 'Poppins'; */
     font-size: 20px;
     margin-top: 20px;
 }
@@ -437,15 +432,7 @@ h5{
 }
 
 .logout-container{
-    /* align-self: flex-end; */
-    /* float: right;
-    margin-left: auto;
-    margin-right: auto; */
-    /* align-items: end; */
-    /* float: right; */
     margin: 0 30px 0 auto;
-    
-    
 }
 
 #logout{
@@ -480,9 +467,6 @@ h5{
 
 .detail-form {
     margin-top: 20px;
-    /* margin-left: 40px;
-    margin-right: 20px; 
-    padding: 40px 0 0 20px;  */
     float: left;
     height: auto;
     width: 100%;
@@ -650,7 +634,6 @@ margin-bottom: 15px;
 
 /* home.html css */
 /* .home-view-task {
-   
 } */
 .home-view-task li {
     padding-top: 10px;
@@ -681,7 +664,7 @@ margin-bottom: 15px;
 }
 
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   .main {
     margin-left: 0;
   }

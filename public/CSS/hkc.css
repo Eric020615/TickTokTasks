@@ -45,7 +45,6 @@ body {
 /* SideNavBar ========================================================= */
 .sidebar {
   display: flex;
-  /* position: fixed; */
   top: 0;
   left: 0;
   width: 200px;
@@ -85,7 +84,6 @@ body {
   margin-top: 20px;
   color: white;
   padding-left: -20px;
-  /* background-color: aliceblue; */
 }
 
 .sidebar .sidemenu {
@@ -121,10 +119,7 @@ body {
 
 /* Main ================================================*/
 .main {
-  /* background-color: pink; */
    margin-left: 232px;
-   /* margin-top: 10px; */
-
 }
 
 /* Top =======================================*/
@@ -239,12 +234,10 @@ body {
 
 /* All-task view */
 .all-task {
-  /* background-color: pink; */
   margin-left: 10px;
 }
 
 .all-task .piece {
-  /* background-color: pink; */
   height: 200px;
   width: 250px;
   border-radius: 30px;
@@ -298,7 +291,6 @@ body {
 }
 .task .task-row-form {
    position: relative;
-   /* background-color: paleturquoise; */
    margin: 5px 0 5px 0;
    border-radius: 12px;
    display: none;
@@ -334,7 +326,6 @@ body {
 
 .task-description {
   position: relative;
-  /* background-color: #d8d6d6; */
   padding: 20px;
   border-radius: 15px;
   display: none;
@@ -342,13 +333,6 @@ body {
 .b-task {
   border: 1px solid rgb(223, 221, 221);
 }
-/* .task-row-form {
-  background-color: pink;
-  padding: 20px 0 20px 0;
-  border-radius: 10px;
-  box-shadow: 1px 0 5px 1px rgba(0, 0, 0, 0.4);
-  width: 1200px;
-} */
 
 .sorting-option {
   padding-left: 10px;
@@ -387,7 +371,6 @@ body {
 
 .pie-chart {
   height: 400px;
-  /* border: 2px solid #6ac2bf; */
   padding: 2px 0;
   padding: 0 25px;
 }
@@ -416,8 +399,6 @@ body {
               -6px -6px 10px -1px rgba(255,255,255,0.7);
 
 }
-
-
 
 .chart::after {
   content: "";
@@ -562,26 +543,8 @@ body {
 
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   .main {
     margin-left: 0;
   }
 }
-
-/* @media (min-width: 992px) {
-  .font-size-lg {
-    font-size: 20px;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 991px) {
-  .font-size-md {
-    font-size: 20px;
-  }
-}
-
-@media (max-width: 767px) {
-  .font-size-sm {
-    font-size: 10px;
-  }
-} */
