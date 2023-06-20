@@ -124,7 +124,7 @@ module.exports.forgot_password_post = async (req,res,next) =>{
             }
             res.status(200).json({payload});
             const token = jwt.sign(payload, secret, {expiresIn: '15m'});
-            const link = `http://localhost:3000/reset-password/${oldUser[0]._id}/${token}`;
+            const link = `https://ticktoktasks2023.onrender.com/reset-password/${oldUser[0]._id}/${token}`;
             let subject= "Tick Tok Tasks Account Password Reset";
             let message= "Dear user,\n\nKindly please click on the below link to reset your password. The link will be expired in 15 minutes. Thank you.\n\n" + link;
             smtp.sendEmail_reset_password(email,subject,message);
