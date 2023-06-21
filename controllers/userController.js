@@ -22,62 +22,6 @@ const handleErrors = (err) => {
   return errors;
 };
 
-// module.exports.uploadImg = async (req,res,next) =>{
-//     try{
-//         const newImage = new Image({
-//             name: req.file.originalname,
-//             image:{
-//                 data:req.file.buffer,
-//                 contentType:req.file.mimetype
-//             }
-//         })
-//         await newImage.save();
-//         res.redirect('/profile');
-//     }
-//     catch(err){
-//         console.log(err)
-//     }
-// }
-
-// module.exports.uploadImg1 = async (req,res,next) =>{
-//     try{
-//         const newImage = new Image({
-//             name: req.body.name,
-//             image:{
-//                 data: fs.readFileSync('uploads/',req.file.filename),
-//                 contentType: "image/png"
-//             },
-//         })
-//         const status = await newImage.save();
-//         console.log(status);
-//     }
-//     catch(err){
-//         console.log(err);
-//     }
-// }
-
-// module.exports.getImg = async (req,res,next) =>{
-//     try{
-//         const images = await Image.find();
-//         res.locals.images = images;
-//         next();
-//     }
-//     catch(err){
-//         console.log(err);
-//     }
-// }
-
-// module.exports.getImg = async (req, res, next) => {
-//   const user_id = res.locals.user._id;
-//   try {
-//     const images = await User.findOne({ _id: user_id },{ image: 1 });
-//     res.locals.images = images;
-//     next();
-//   } catch (err) {
-//     console.log(err);
-//   }
-// };
-
 // upload Image
 module.exports.uploadImg = async (req, res, next) => {
   const user_id = res.locals.user._id;

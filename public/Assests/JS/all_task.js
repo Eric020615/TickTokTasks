@@ -149,7 +149,6 @@ function createNewTask(title, status, priority, deadline) {
       .addClass("pb-2")
       .append($("<span>").addClass("badge bg-danger").text("To-Do"));
   }
-  // piece = $("<div>").addClass("piece d-flex flex-nowrap b-red m-auto");
 
   let ul = $("<ul>").addClass(
     "d-flex flex-nowrap flex-column justify-content-around max-w-200"
@@ -273,18 +272,6 @@ function drawCompletionRateChart(
       .eq(2)
       .text("Incompleted " + 0);
   } else {
-    // $(".prio-high")
-    //   .css(
-    //     "background-image",
-    //     "conic-gradient(rgb(107, 221, 107) 0deg,rgb(107, 221, 107) " +
-    //       HighPrior_portion +
-    //       "deg,#dc3545 " +
-    //       HighPrior_portion +
-    //       "deg,#dc3545 360deg)"
-    //   )
-    //   .children("h1")
-    //   .removeClass("fs-4 mt-2")
-    //   .text(Math.floor((compHigh / allHigh) * 100) + "%");
     let start = 0;
     let percentage_num = 0;
     let completionvalue = Math.floor((compHigh / allHigh) * 100);
@@ -354,19 +341,6 @@ function drawCompletionRateChart(
       .eq(2)
       .text("Incompleted " + 0);
   } else {
-    // $(".prio-middle")
-    //   .css(
-    //     "background-image",
-    //     "conic-gradient(rgb(107, 221, 107) 0deg,rgb(107, 221, 107) " +
-    //       MiddlePrior_portion +
-    //       "deg,#ffc107 " +
-    //       MiddlePrior_portion +
-    //       "deg,#ffc107 360deg)"
-    //   )
-    //   .children("h1")
-    //   .removeClass("fs-4 mt-2")
-    //   .text(Math.floor((compMiddle / allMiddle) * 100) + "%");
-
     let start = 0;
     let percentage_num = 0;
     let completionvalue = Math.floor((compMiddle / allMiddle) * 100);
@@ -436,19 +410,6 @@ function drawCompletionRateChart(
       .eq(2)
       .text("Incompleted " + 0);
   } else {
-    // $(".prio-low")
-    //   .css(
-    //     "background-image",
-    //     "conic-gradient(rgb(107, 221, 107) 0deg,rgb(107, 221, 107) " +
-    //       LowPrior_portion +
-    //       "deg,blue " +
-    //       LowPrior_portion +
-    //       "deg,blue 360deg)"
-    //   )
-    //   .children("h1")
-    //   .removeClass("fs-4 mt-2")
-    //   .text(Math.floor((compLow / allLow) * 100) + "%");
-
     let start = 0;
     let percentage_num = 0;
     let completionvalue = Math.floor((compLow / allLow) * 100);
@@ -655,76 +616,6 @@ function createNewRowTask(no, title, status, priority, deadline, description) {
   return newTask;
 }
 
-// window.onload = async function (e) {
-//   e.preventDefault();
-//   try {
-//     const res = await fetch("/task-review");
-//     console.log(res.query);
-//     var examples = JSON.stringify(res.query);
-//     // var d = JSON.stringify(query);
-//     console.log(examples);
-//     // console.log("kkkk"+res.data);
-//   fetch("/task-review")
-//     .then((response) => response.json())
-//     .then((data) => {
-//       console.log(data.message); // Output: Hello from backend!
-//     });
-//   } catch (err) {
-//     console.log(err);
-//   }
-// }
-
-//   fetch("/task-review")
-//     .then((response) => response.json())
-//     .then((json) => console.log(JSON.stringify(json)));
-// };
-
-// window.onload = async function (e) {
-//     e.preventDefault();
-//     try {
-//       const resolve = await fetch("/task-review", {
-//         method: "POST",
-//         body: JSON.stringify({
-//           user_id,
-//           title,
-//           description,
-//           date,
-//           priority_level,
-//           progress_level,
-//         }),
-//         headers: { "Content-Type": "application/json" },
-//       });
-//       const data = await resolve.json();
-//       console.log(data);
-//     } catch (err) {
-//       console.log(err);
-//     }
-// }
-// window.onload = async function (e) {
-//     e.preventDefault();
-//     try {
-//       const resolve = await fetch("/all-task", {
-//         method: "POST",
-//         body: JSON.stringify({
-//           user_id,
-//           title,
-//           description,
-//           date,
-//           priority_level,
-//           progress_level,
-//         }),
-//         headers: { "Content-Type": "application/json" },
-//       });
-//       const data = await resolve.json();
-//       console.log(data);
-//     } catch (err) {
-//       console.log(err);
-//     }
-// }
-
-// $("h4").css("color","red");
-// var li = $("<li>1111</li>");
-// $("h4").append(li);
 function showTaskRowHeader() {
   const header = `<div class="task-row-form row p-3 d-none d-lg-flex">
                         <div class="col-xl-6 col-md-3 col-sm-12 col-12 p-0">
@@ -808,38 +699,24 @@ function showTaskPrioAsc(e) {
   let d_t = tasks;
   const sort_priority_tasks = sortByPriorityAsc(d_t);
   showTaskRow(sort_priority_tasks);
-  // const sorting = `<div class="sorting-option m-0">
-  //                       <span class="fw-bolder">Deadline Sorting : &nbsp &nbsp</span>
-  //                       <button class="deadline-sort-asc btn btn-sorting-selected btn-sm">Ascending</but>
-  //                       <button class="deadline-sort-des btn btn-light btn-sm">Descending</button>
-  //                   </div>`;
-  // $(".all-task").children("div").addClass("task-row").prepend(sorting);
-
-  // $(".task-row").on("click", ".deadline-sort-des", function () {
-  //   console.log("eeeee");
-  // });
-  // e.cancelBubble = true;
 }
 
 function showTaskPrioDes(e) {
   let d_t = tasks;
   const sort_priority_tasks = sortByPriorityDes(d_t);
   showTaskRow(sort_priority_tasks);
-  // e.cancelBubble = true;
 }
 
 function showTaskDateAsc(e) {
   let d_t = tasks;
   const sort_dead_tasks = sortByDateAsc(d_t);
   showTaskRow(sort_dead_tasks);
-  // e.cancelBubble = true;
 }
 
 function showTaskDateDes(e) {
   let d_t = tasks;
   const sort_dead_tasks = sortByDateDes(d_t);
   showTaskRow(sort_dead_tasks);
-  // e.cancelBubble = true;
 }
 
 function showSortingOption(type) {
@@ -861,21 +738,6 @@ function showSortingOption(type) {
   $(".all-task").children(".sorting-option").append(sorting);
 
   $(".sorting-option").on("click", "button", function (e) {
-    // $(this)
-    //   .children("button")
-    //   .eq(0)
-    //   .addClass("btn-sorting-selected")
-    //   .next()
-    //   .removeClass("btn-sorting-selected");
-
-    //   $(this)
-    //     .children("button")
-    //     .eq(1)
-    //     .addClass("btn-sorting-selected")
-    //     .prev()
-    //     .removeClass("btn-sorting-selected");
-
-    // console.log($(this).children("button").eq(1).html());
     $(this)
       .addClass("btn-sorting-selected")
       .siblings("button")
@@ -899,31 +761,6 @@ function showSortingOption(type) {
     //  e.cancelBubble = true;
   });
 }
-// function showTaskPrioDes(e) {
-//   let d_t = tasks;
-//   const sort_deadline_tasks = sortByDateDes(d_t);
-//   showTaskRow(sort_deadline_tasks);
-//   const sorting = `<div class="sorting-option m-0">
-//                         <span class="fw-bolder">Deadline Sorting : &nbsp &nbsp</span>
-//                         <button class="deadline-sort-asc btn btn-light btn-sm">Ascending</but>
-//                         <button class="deadline-sort-des btn btn-sorting-selectedt btn-sm">Descending</button>
-//                     </div>`;
-//   $(".all-task").children("div").addClass("task-row").prepend(sorting);
-//   e.cancelBubble = true;
-// }
-
-// $(".sort-deadline").on("click", function (e) {
-//   let d_t = tasks;
-//   const sort_deadline_tasks = sortByDateAsc(d_t);
-//   showTaskRow(sort_deadline_tasks);
-//   const sorting = `<div class="sorting-option m-0">
-//                         <span class="fw-bolder">Deadline Sorting : &nbsp &nbsp</span>
-//                         <button class="deadline-sort-asc btn btn-sorting-selected btn-sm">Ascending</but>
-//                         <button class="deadline-sort-des btn btn-light btn-sm">Descending</button>
-//                     </div>`;
-//   $(".all-task").children("div").addClass("task-row").prepend(sorting);
-//   e.cancelBubble = true;
-// });
 
 $(".sort-priority").on("click", function (e) {
   showSortingOption("priority");
@@ -942,30 +779,3 @@ $(".sort-default").on("click", function (e) {
   showTaskRow(tasks);
   e.cancelBubble = true;
 });
-
-// $(".deadline-sort-des").on("click", function (e) {
-//   let d_t = tasks;
-//   const sort_deadline_tasks = sortByDateDes(d_t);
-//   showTaskRow(sort_deadline_tasks);
-//   const sorting = `<div class="sorting-option m-0">
-//                       <span class="fw-bolder">Deadline Sorting : &nbsp &nbsp</span>
-//                       <button class="deadline-sort-asc btn btn-light btn-sm">Ascending</but>
-//                       <button class="deadline-sort-des btn btn-sorting-selected btn-sm">Descending</button>
-//                   </div>`;
-//   $(".all-task").children("div").addClass("task-row").prepend(sorting);
-//   e.cancelBubble = true;
-// });
-
-// $(".sort-priority").on("click", function (e) {
-//   $(".all-task").children("div").empty();
-//   let p_t = tasks;
-//   const sort_priority_tasks = sortByPriorityAsc(p_t);
-//  showTaskRow(sort_priority_tasks);
-//  const sorting = `<div class="sorting-option m-0">
-//                         <span class="fw-bolder">Priority Sorting : &nbsp &nbsp</span>
-//                         <button class="prio-sort-asc btn btn-sorting-selected btn-sm">Ascending</but>
-//                         <button class="prio-sort-des btn btn-light btn-sm">Descending</button>
-//                     </div>`;
-//  $(".all-task").children("div").addClass("task-row").prepend(sorting);
-//   e.cancelBubble = true;
-// });

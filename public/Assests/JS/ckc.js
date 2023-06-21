@@ -23,26 +23,6 @@ toggle_side_btn.onclick = function(){
     close(auto_close_sideNav);
 };
 
-//collapse-side-nav-btn
-
-//Delete-acc button function
-// const openModalBtn = document.getElementById('delete_btn');
-// const closeModalBtn = document.getElementById('cancel-btn');
-// const modalOverlay = document.getElementById('modal-overlay');
-
-// function openModal() {
-//   modalOverlay.style.display = 'block';
-//   modal.style.display = 'block';
-// }
-
-// function closeModal() {
-//   modalOverlay.style.display = 'none';
-//   modal.style.display = 'none';
-// }
-
-// openModalBtn.addEventListener('click', openModal);
-// closeModalBtn.addEventListener('click', closeModal);
-
 
 $("#btn-edit").on("click", function(){
      $(".profile-details label input")
@@ -97,9 +77,6 @@ $("#btn-save").on("click", async function (event) {
       });
       const data = await resolve.json();
       location.assign("/profile");
-      // if (data.profile_edited) {
-      //   // location.assign("/profile");
-      // }
       if (data.errors) {
         description_error.textContent = data.errors.description;
       }
@@ -113,32 +90,6 @@ $("#btn-save").on("click", async function (event) {
   } 
 
 });
-
-// $("#btn-upload-image").on("click", async function (event){
-//   event.preventDefault();
-//     try {
-//       const resolve = await fetch("/upload-image", {
-//         method: "POST",
-//         body: JSON.stringify({
-//           email,
-//           username,
-//           contact_num,
-//           date_of_birth,
-//         }),
-//         headers: { "Content-Type": "application/json" },
-//       });
-//       const data = await resolve.json();
-//       if (data.profile_edited) {
-//         location.assign("/profile");
-//       }
-//       if (data.errors) {
-//         description_error.textContent = data.errors.description;
-//       }
-//     } catch (err) {
-//       console.log(err);
-//     }
-// });
-
 
 document.querySelector(".profile-pic-form").addEventListener("submit", async (event) => {
   event.preventDefault();
